@@ -133,15 +133,16 @@
         let d2 = data[1]
         
         let selisih = Math.abs(d1.total - d2.total);
+        let saldo = d1.total + d2.total
         let hasil = "";
         
         hasil += "🔵" + d1.nama + ": " + d1.total + "\n\n";
         hasil += "🔴" + d2.nama + ": " + d2.total + "\n\n"
         
         if (d1.total > d2.total) {
-          hasil += "" + d1.nama + " Masih Kekurangan " + selisih + " untuk Menyamai " + d2.nama
+          hasil += "" + d2.nama + " Masih Kekurangan " + selisih + " untuk Menyamai " + d1.nama  + "\n\nSaldo Saat ini adalah " + saldo
         } else if (d2.total > d1.total) {
-          hasil += "" + d2.nama + " Masih Kekurangan " + selisih + " untuk Menyamai " + d1.nama
+          hasil += "" + d1.nama + " Masih Kekurangan " + selisih + " untuk Menyamai " + d2.nama  + "\n\nSaldo Saat ini adalah " + saldo
         } else {
           hasil += "🔰" + d1.nama + " DAN " + d2.nama + " Telah Seimbang"
         }
