@@ -159,7 +159,7 @@
         let final;
         
         if (isLF) {
-          let fee = getFee(total);
+          let fee = total - 0.25;
           final = total - fee;
         } else {
           let x2 = total * 2;
