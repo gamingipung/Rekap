@@ -119,7 +119,7 @@
   
   <script>
     function getFee(n) {
-      return Math.floor(n / 2000) + 1;
+      return Math.floor(n / 20) + 1;
     }
     
     function proses() {
@@ -159,7 +159,7 @@
         let final;
         
         if (isLF) {
-          let fee = total - 0.25;
+          let fee = total - fee;
           final = total - fee;
         } else {
           let x2 = total * 2;
